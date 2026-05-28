@@ -1,0 +1,38 @@
+QUERY para crear la base de datos : 
+
+Nombre:Miguel Castillo
+Ingenieria en informatica segundo año 
+fecha : 28-05-2026
+
+CREATE DATABASE nuevosistema;
+use nuevosistema;
+
+CREATE TABLE roles (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE usuarios (
+  rut VARCHAR(12) NOT NULL PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  clave VARCHAR(255) NOT NULL,
+  rol_id INT,
+  FOREIGN KEY (rol_id) REFERENCES roles(id)
+);
+
+INSERT INTO roles (nombre) VALUES ('Administrador'), ('Usuario');
+
+INSERT INTO usuarios (rut, nombre, email, clave, rol_id)
+VALUES ('23451131-9', 'Miguel Castillo', 'MC@alumnos.santotomas.cl', '777', 1);
+
+CREATE TABLE juegos(
+
+    ID int AUTO_INCREMENT PRIMARY KEY,
+    Nombre varchar(55) not null,
+    marca varchar(55) not null
+);
+
+INSERT INTO juegos (Nombre, marca)
+VALUES ('Uncharted 1', 'Naughty Dog');

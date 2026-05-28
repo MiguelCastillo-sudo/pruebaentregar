@@ -1,0 +1,30 @@
+Primero creamos la carpeta y ejecutamos :
+
+git init para hacerle entender que aca vamos a trabajar y generar 
+nuestros repositorios al igual que 
+
+npm init -y 
+
+nos sirve para generar el proyecto package.json,
+tambien se descargan las dependencias que sirven como 
+node modules que serian :
+
+mysql2 
+body-corse
+express
+curs
+
+despues creamos la estructura del pryecto dividiendolo en 
+las carpetas que se conectaran entre si :
+
+modelos : guardara las clases  donde estaran las query de crud
+db : guardara la conexion mysql que nos conectara a la base de datos
+controller : va manejar las querys y podra manejar tmabine excepeciones,
+
+views: va tener la vista practicamente el frontend donde vamos a recoger los datos
+tanto para la autenticacion como para la creacion/registro de juegos 
+y donde podemos mostrar el listado de juegos.
+
+routes: estos van a definir hacia donde va ir nuestro programa dependiendo de lo que hagamos 
+y que se va hacer alli dirigiendo hacia el controlador y la funcion que trae.
+

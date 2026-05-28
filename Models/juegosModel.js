@@ -1,10 +1,10 @@
 
-const db = require('../db/conexion');
+const db = require('../db/Conexion');
 
 class juegosModel {
   obtenerTodos(callback) {
     const sql = `
-      SELECT j.ID, j.nombre, j.marca
+      SELECT j.ID, j.Nombre, j.marca
       FROM juegos j`;
 
     db.query(sql, callback);
@@ -19,7 +19,7 @@ class juegosModel {
   }
 
   obtenermARCA(callback) {
-    db.query('SELECT * FROM producto', callback);
+    db.query('SELECT * FROM juegos', callback);
   }
 }
 

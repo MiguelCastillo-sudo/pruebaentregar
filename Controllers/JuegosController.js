@@ -1,18 +1,18 @@
-const Juegos = require('../models/JuegosController');
+const Juegos = require('../models/juegosModel');
 
 
 class juegosController {
   index(req, res) {
     Juegos.obtenerTodos((err, resultados) => {
       if (err) throw err;
-      res.render('usuarios/index', { Juegos: resultados });
+      res.render('juegos/index', { juegos: resultados });
     });
   }
 
   crear(req, res) {
     Juegos.obtenermARCA((err, marca) => {
       if (err) throw err;
-      res.render('usuarios/crear', { marca });
+      res.render('juegos/crear', { marca });
     });
   }
 
@@ -20,7 +20,7 @@ class juegosController {
     const datos = req.body;
     Juegos.insertar(datos, (err) => {
       if (err) throw err;
-      res.redirect('/usuarios');
+      res.redirect('/juegos');
     });
   }
 

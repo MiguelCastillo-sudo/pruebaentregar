@@ -1,0 +1,12 @@
+<h2>Listado de Juegos</h2>
+<a href="/juegos/crear">REGISTRAR TU JUEGO</a>
+<table>
+  <tr><th>ID</th><th>Nombre</th><th>Marca</th></tr>
+  <% juegos.forEach(j => { %>
+    <tr>
+      <td><%= j.ID %></td>
+      <td><%= j.Nombre %></td>
+      <td><%= j.marca %></td>
+    </tr>
+  <% }) %>
+</table>
