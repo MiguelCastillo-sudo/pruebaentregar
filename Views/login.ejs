@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  
 </head>
 <body>
-   
+  <div class="login-container">
+    <h2>Inicio de Sesion</h2>
 
+    <% if (error) { %>
+      <div class="error"><%= error %></div>
+    <% } %>
 
-    
-    
+    <form action="/login" method="POST">
+      <label>Correo Electronico</label>
+      <input type="email" name="email" required>
 
+      <label>Contraseña</label>
+      <input type="password" name="clave" required>
+
+      <button type="submit">logear</button>
+    </form>
+  </div>
 </body>
 </html>
